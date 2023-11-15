@@ -17,8 +17,8 @@ For more information, refer to the publication: **[Kvasir-SEG: A Segmented Polyp
 To get started, clone this repository and install the required packages.
 
 ```bash
-git clone https://github.com/yourusername/polyp-segmentation.git
-cd polyp-segmentation
+git clone https://github.com/TimKong21/Polyp-Segmentation.git
+cd Polyp-Segmentation
 pip install -r requirements.txt
 ```
 
