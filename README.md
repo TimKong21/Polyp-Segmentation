@@ -3,6 +3,7 @@
 ## Introduction
 
 This project aims to perform polyp segmentation in endoscopy images using the U-Net architecture. The model is trained on the Kvasir-SEG dataset and aims to provide accurate and efficient segmentation to assist in medical diagnosis.
+![alt text](https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png)
 
 ## Dataset
 
@@ -27,7 +28,7 @@ There are two IPython Notebooks (with `.ipynb` extension):
 1. *EDA and Dataset Preperation.ipynb*
 2. *Image preprocessing Data generator and Modeling.ipynb*
 
-### *EDA and Dataset Preperation.ipynb*[link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/EDA%20and%20Dataset%20Preperation.ipynb)
+### *EDA and Dataset Preperation.ipynb ([link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/EDA%20and%20Dataset%20Preperation.ipynb))*
 
 When the *Kvasir-SEG* folder is unzipped, the file names are not readable and serialized. 
 For example:
@@ -90,7 +91,7 @@ In addition, the notebook will also perform Exploratory Data Analysis to check o
 - polyp size and count
 - image hue, brightness, and saturation
 
-### *Image preprocessing Data generator and Modeling.ipynb*[link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/Image%20preprocessing%20Data%20generator%20and%20Modeling.ipynb)
+### *Image preprocessing Data generator and Modeling.ipynb ([link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/Image%20preprocessing%20Data%20generator%20and%20Modeling.ipynb))*
 
 This notebook covers four main sections, they are:
 
