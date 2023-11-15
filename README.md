@@ -1,10 +1,10 @@
 # Polyp Segmentation
 
-## **Introduction**
+## Introduction
 
 This project aims to perform polyp segmentation in endoscopy images using the U-Net architecture. The model is trained on the Kvasir-SEG dataset and aims to provide accurate and efficient segmentation to assist in medical diagnosis.
 
-## **Dataset**
+## Dataset
 
 The model is trained on the Kvasir-SEG dataset, which is a collection of endoscopy images specifically designed for polyp segmentation tasks. The dataset is hosted by Simula Research Laboratory, the website to the dataset can be accessed [here](https://datasets.simula.no/kvasir-seg/). 
 
@@ -12,14 +12,11 @@ For more information, refer to the publication: **[Kvasir-SEG: A Segmented Polyp
 
 ## Installation
 
-To get started, please follow steps below:
-
-1. Download all the project assets from the provided [Google Drive link](https://drive.google.com/drive/folders/1rxoyNXTvHEPsNYPfMxLFqPmNjBByp5oA?usp=sharing) to your respected directory.
-2. Unzip the folder in the same directory.
-3. In your favorite command line interface, change current directory to the respected directory.
-4.  Install the required packages with command below. 
+To get started, clone this repository and install the required packages.
 
 ```bash
+git clone https://github.com/yourusername/polyp-segmentation.git
+cd polyp-segmentation
 pip install -r requirements.txt
 ```
 
@@ -30,7 +27,7 @@ There are two IPython Notebooks (with `.ipynb` extension):
 1. *EDA and Dataset Preperation.ipynb*
 2. *Image preprocessing Data generator and Modeling.ipynb*
 
-### *EDA and Dataset Preperation.ipynb*
+### *EDA and Dataset Preperation.ipynb*[link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/EDA%20and%20Dataset%20Preperation.ipynb)
 
 When the *Kvasir-SEG* folder is unzipped, the file names are not readable and serialized. 
 For example:
@@ -93,7 +90,7 @@ In addition, the notebook will also perform Exploratory Data Analysis to check o
 - polyp size and count
 - image hue, brightness, and saturation
 
-### *Image preprocessing Data generator and Modeling.ipynb*
+### *Image preprocessing Data generator and Modeling.ipynb*[link](https://github.com/TimKong21/Polyp-Segmentation/blob/main/Image%20preprocessing%20Data%20generator%20and%20Modeling.ipynb)
 
 This notebook covers four main sections, they are:
 
