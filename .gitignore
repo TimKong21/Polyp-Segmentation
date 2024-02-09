@@ -1,2 +1,3 @@
 model/unet.h5
 (ignore) Verify temp directory accessibility.ipynb
+venv/
