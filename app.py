@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import boto3
 import shutil
 import numpy as np
 import tensorflow as tf
@@ -7,9 +8,34 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image
 from zipfile import ZipFile
 
-# Load the saved model
-saved_model_path = './model/unet.h5'
-loaded_model = tf.keras.models.load_model(saved_model_path)
+# Function to download the model from S3
+def download_model_from_s3(bucket_name, object_key, model_path):
+    # Ensure the directory for the model exists
+    model_dir = os.path.dirname(model_path)
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+        print(f"Created directory {model_dir} for model.")
+
+    if not os.path.exists(model_path):
+        print("Model not found locally. Downloading from S3...")
+        s3 = boto3.client('s3')
+        s3.download_file(Bucket=bucket_name, Key=object_key, Filename=model_path)
+        print("Model downloaded.")
+    else:
+        print("Model found locally. Loading...")
+
+# Function to load the model, ensuring it's downloaded if not present
+def load_model(model_path):
+    # Define S3 bucket details and local model path
+    bucket_name = 'segmentation-model-bucket'
+    object_key = 'model/unet.h5'
+
+    # Download the model from S3
+    download_model_from_s3(bucket_name, object_key, model_path)
+
+    # Load and return the model
+    model = tf.keras.models.load_model(model_path)
+    return model
 
 # Function to clear the temporary directory
 def clear_temp_directory(directory):
@@ -41,7 +67,7 @@ def generate_data_batches(data_dir, batch_size, target_size, seed=None):
     return test_images_generator
 
 # Function to handle uploaded files and predictions
-def process_and_display_images(uploaded_files, temp_dir):
+def process_and_display_images(loaded_model, uploaded_files, temp_dir):
     try:
         # Clear and recreate the temporary directory
         clear_temp_directory(temp_dir)
@@ -124,6 +150,10 @@ def process_and_display_images(uploaded_files, temp_dir):
         st.error(f"An error occurred while processing the images: {e}")
 
 def main():
+    # Load the model
+    model_path = 'model/unet.h5'
+    model = load_model(model_path)
+
     # App title
     st.title("Polyp Segmentation Tool")
 
@@ -164,7 +194,7 @@ def main():
     if uploaded_files:
         if st.button('Process Images'):
             with st.spinner('Processing images...'):
-                process_and_display_images(uploaded_files, temp_dir)
+                process_and_display_images(model, uploaded_files, temp_dir)
                 st.success('Processing complete!')
                
 if __name__ == "__main__":
