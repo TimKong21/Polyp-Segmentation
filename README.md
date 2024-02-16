@@ -23,12 +23,11 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 ## Usage
 
 1. **Access the Tool**: Navigate to the Streamlit app URL.
+
     [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://polyp-segmentation-tool.streamlit.app)
 
 2. **Upload Images**: Use the file uploader to select colonoscopy images (JPG/JPEG) for segmentation.
-
 3. **Process Images**: Click 'Process Images' to start the segmentation process.
-
 4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
-[![App Demo](.streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
+[![App Demo](./streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
