@@ -13,13 +13,6 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 - **Flexible Upload Options**: Supports both single and multiple image uploads, catering to diverse diagnostic needs.
 - **Downloadable Results**: Users can download segmentation masks as ZIP files for further analysis, documentation, or record-keeping.
 
-## Technical Highlights
-
-- **Deep Learning Model Optimization**: Employed a U-Net architecture, fine-tuned for high accuracy in medical image segmentation, demonstrating the effective application of established AI models to address specific challenges in medical diagnostics.
-- **Data Preprocessing and Augmentation**: Highlighted the implementation of a robust pipeline for image resizing, normalization, and augmentation to improve model generalizability across different colonoscopy images.
-- **Streamlined Interface and Dynamic Model Access**: Developed a Streamlit web application that prioritizes ease of use. The application supports batch processing and provides downloadable results for offline analysis. The deep learning model used for segmentation is securely stored on AWS S3 and is dynamically loaded by the application as needed.
-- **Exploratory Data Analysis (EDA)**: Conducted detailed EDA to gain insights into polyp characteristics, which informed the preprocessing and augmentation strategies to enhance detection accuracy.
-
 ## Usage
 
 1. **Access the Tool**: Navigate to the Streamlit app URL.
@@ -30,4 +23,11 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 3. **Process Images**: Click 'Process Images' to start the segmentation process.
 4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
-[![App Demo](./streamlit/app_demo.webm)](https://polyp-segmentation-tool.streamlit.app/)
+[![App Demo](./streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
+
+## Technical Highlights
+
+- **Deep Learning Model Optimization**: Employed a U-Net architecture, fine-tuned for high accuracy in medical image segmentation, demonstrating the effective application of established AI models to address specific challenges in medical diagnostics.
+- **Data Preprocessing and Augmentation**: Highlighted the implementation of a robust pipeline for image resizing, normalization, and augmentation to improve model generalizability across different colonoscopy images.
+- **Streamlined Interface**: Developed a Streamlit web application that prioritizes ease of use. The application supports batch processing and provides downloadable results for offline analysis. The deep learning model used for segmentation is securely stored on AWS S3 and is dynamically loaded by the application as needed.
+- **Exploratory Data Analysis (EDA)**: Conducted detailed EDA to gain insights into polyp characteristics, which informed the preprocessing and augmentation strategies to enhance detection accuracy.
