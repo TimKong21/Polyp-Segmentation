@@ -1,102 +1,34 @@
-# Polyp Segmentation
+# Polyp Segmentation Tool
 
-## Introduction
+## Overview
 
-This project aims to perform polyp segmentation in endoscopy images using the U-Net architecture. The model is trained on the Kvasir-SEG dataset and aims to provide accurate and efficient segmentation to assist in medical diagnosis.
+This Polyp Segmentation Tool is designed to assist healthcare professionals by providing an automated way to segment polyps from colonoscopy images. Utilizing a deep learning model based on the U-Net architecture, this tool aims to enhance the preliminary diagnosis process and aid in treatment planning by offering visual segmentation masks of detected polyps.
 
 ![alt text](https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png)
 
-## Dataset
+## Features
 
-The model is trained on the Kvasir-SEG dataset, which is a collection of endoscopy images specifically designed for polyp segmentation tasks. The dataset is hosted by Simula Research Laboratory, the website to the dataset can be accessed [here](https://datasets.simula.no/kvasir-seg/). 
+- **Automated Polyp Segmentation**: Users can upload colonoscopy images to receive segmentation masks that highlight polyp locations, facilitating early detection and diagnosis.
+- **Streamlit Web Application**: The tool features a user-friendly web interface hosted on Streamlit Community Cloud, enabling easy uploading of colonoscopy images and visualization of segmentation results.
+- **Flexible Upload Options**: Supports both single and multiple image uploads, catering to diverse diagnostic needs.
+- **Downloadable Results**: Users can download segmentation masks as ZIP files for further analysis, documentation, or record-keeping.
 
-For more information, refer to the publication: **[Kvasir-SEG: A Segmented Polyp Dataset](https://arxiv.org/pdf/1911.07069.pdf)**
+## Technical Highlights
 
-## Installation
+- **Deep Learning Model Optimization**: Employed a U-Net architecture, fine-tuned for high accuracy in medical image segmentation, demonstrating the effective application of established AI models to address specific challenges in medical diagnostics.
+- **Data Preprocessing and Augmentation**: Highlighted the implementation of a robust pipeline for image resizing, normalization, and augmentation to improve model generalizability across different colonoscopy images.
+- **Streamlined Interface and Dynamic Model Access**: Developed a Streamlit web application that prioritizes ease of use. The application supports batch processing and provides downloadable results for offline analysis. The deep learning model used for segmentation is securely stored on AWS S3 and is dynamically loaded by the application as needed.
+- **Exploratory Data Analysis (EDA)**: Conducted detailed EDA to gain insights into polyp characteristics, which informed the preprocessing and augmentation strategies to enhance detection accuracy.
 
-To get started, clone this repository and install the required packages.
+## Usage
 
-```bash
-git clone https://github.com/TimKong21/Polyp-Segmentation.git
-cd Polyp-Segmentation
-pip install -r requirements.txt
-```
+1. **Access the Tool**: Navigate to the Streamlit app URL.
+    [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://polyp-segmentation-tool.streamlit.app)
 
-## Project assets description
+2. **Upload Images**: Use the file uploader to select colonoscopy images (JPG/JPEG) for segmentation.
 
-There are two IPython Notebooks (with `.ipynb` extension):
+3. **Process Images**: Click 'Process Images' to start the segmentation process.
 
-1. *EDA and Dataset Preperation.ipynb*
-2. *Image preprocessing Data generator and Modeling.ipynb*
+4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
-### *[EDA and Dataset Preperation.ipynb](https://github.com/TimKong21/Polyp-Segmentation/blob/main/EDA%20and%20Dataset%20Preperation.ipynb)*
-
-When the *Kvasir-SEG* folder is unzipped, the file names are not readable and serialized. 
-For example:
-
-```markdown
-Kvasir-SEG
-├── images
-│   ├── cju0qkwl35piu0993l0dewei2.jpg
-│   ├── cju0qoxqj9q6s0835b43399p4.jpg
-│   ├── ...
-│   
-├── masks
-│   ├── cju0qkwl35piu0993l0dewei2.jpg
-│   ├── cju0qoxqj9q6s0835b43399p4.jpg
-│   ├── ...
-│
-└── kavsir_bboxes.json
-```
-
-This notebook will rename and serialize the files, then split them into train, validation, and test set in a new folder named *new_data*. For example:
-
-```markdown
-new_data
-├── test
-│   ├── images
-│       ├── 0011.jpg
-|       ├── 0024.jpg
-|       ├── ...
-│   ├── masks
-│       ├── 0011.jpg
-|       ├── 0024.jpg
-|       ├── ...
-|
-├── train
-│   ├── images
-│       ├── 0001.jpg
-|       ├── 0002.jpg
-|       ├── ...
-│   ├── masks
-│       ├── 0001.jpg
-|       ├── 0002.jpg
-|       ├── ...
-|
-├── valid
-│   ├── images
-│       ├── 0008.jpg
-|       ├── 0009.jpg
-|       ├── ...
-│   ├── masks
-│       ├── 0008.jpg
-|       ├── 0009.jpg
-|       ├── ...
-```
-
-In addition, the notebook will also perform Exploratory Data Analysis to check on:
-
-- image basic components
-- image width and height
-- polyp positions
-- polyp size and count
-- image hue, brightness, and saturation
-
-### *[Image preprocessing Data generator and Modeling.ipynb](https://github.com/TimKong21/Polyp-Segmentation/blob/main/Image%20preprocessing%20Data%20generator%20and%20Modeling.ipynb)*
-
-This notebook covers four main sections, they are:
-
-- Prepare image data generator for training the U-net model
-- Evaluate the model performance using various metrics such as IoU (Intersaction over Union), Dice Coefficient, and a confusion matrix
-- Recommend techniques to improve the model
-- Discuss on model’s limitation
+[![App Demo](.streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
