@@ -6,13 +6,6 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 
 ![Intro image](https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png)
 
-## Features
-
-- **Automated Polyp Segmentation**: Users can upload colonoscopy images to receive segmentation masks that highlight polyp locations, facilitating early detection and diagnosis.
-- **Streamlit Web Application**: The tool features a user-friendly web interface hosted on Streamlit Community Cloud, enabling easy uploading of colonoscopy images and visualization of segmentation results.
-- **Flexible Upload Options**: Supports both single and multiple image uploads, catering to diverse diagnostic needs.
-- **Downloadable Results**: Users can download segmentation masks as ZIP files for further analysis, documentation, or record-keeping.
-
 ## Usage
 
 1. **Access the Tool**: Navigate to the Streamlit app URL.
@@ -23,7 +16,14 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 3. **Process Images**: Click 'Process Images' to start the segmentation process.
 4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
-[![App Demo](./streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
+[![App Demo](./streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app)
+
+## Features
+
+- **Automated Polyp Segmentation**: Users can upload colonoscopy images to receive segmentation masks that highlight polyp locations, facilitating early detection and diagnosis.
+- **Streamlit Web Application**: The tool features a user-friendly web interface hosted on Streamlit Community Cloud, enabling easy uploading of colonoscopy images and visualization of segmentation results.
+- **Flexible Upload Options**: Supports both single and multiple image uploads, catering to diverse diagnostic needs.
+- **Downloadable Results**: Users can download segmentation masks as ZIP files for further analysis, documentation, or record-keeping.
 
 ## Technical Highlights
 
