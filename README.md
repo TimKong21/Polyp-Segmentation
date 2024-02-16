@@ -4,7 +4,7 @@
 
 This Polyp Segmentation Tool is designed to assist healthcare professionals by providing an automated way to segment polyps from colonoscopy images. Utilizing a deep learning model based on the U-Net architecture, this tool aims to enhance the preliminary diagnosis process and aid in treatment planning by offering visual segmentation masks of detected polyps.
 
-![alt text](https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png)
+![Intro image](https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png)
 
 ## Features
 
@@ -30,4 +30,4 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 3. **Process Images**: Click 'Process Images' to start the segmentation process.
 4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
-[![App Demo](./streamlit/app_demo.gif)](https://polyp-segmentation-tool.streamlit.app/)
+[![App Demo](./streamlit/app_demo.webm)](https://polyp-segmentation-tool.streamlit.app/)
