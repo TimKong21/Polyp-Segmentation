@@ -21,13 +21,19 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 ## Features
 
 - **Automated Polyp Segmentation**: Users can upload colonoscopy images to receive segmentation masks that highlight polyp locations, facilitating early detection and diagnosis.
+
 - **Streamlit Web Application**: The tool features a user-friendly web interface hosted on Streamlit Community Cloud, enabling easy uploading of colonoscopy images and visualization of segmentation results.
+
 - **Flexible Upload Options**: Supports both single and multiple image uploads, catering to diverse diagnostic needs.
+
 - **Downloadable Results**: Users can download segmentation masks as ZIP files for further analysis, documentation, or record-keeping.
 
 ## Technical Highlights
 
 - **Deep Learning Model Optimization**: Employed a U-Net architecture, fine-tuned for high accuracy in medical image segmentation, demonstrating the effective application of established AI models to address specific challenges in medical diagnostics.
+
 - **Data Preprocessing and Augmentation**: Highlighted the implementation of a robust pipeline for image resizing, normalization, and augmentation to improve model generalizability across different colonoscopy images.
+
 - **Streamlined Interface**: Developed a Streamlit web application that prioritizes ease of use. The application supports batch processing and provides downloadable results for offline analysis. The deep learning model used for segmentation is securely stored on AWS S3 and is dynamically loaded by the application as needed.
+
 - **Exploratory Data Analysis (EDA)**: Conducted detailed EDA to gain insights into polyp characteristics, which informed the preprocessing and augmentation strategies to enhance detection accuracy.
