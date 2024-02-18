@@ -25,7 +25,7 @@ By leveraging the [Kvasir-SEG dataset](https://datasets.simula.no/kvasir-seg/), 
 5. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
 <p align="center">
-  <img src="./streamlit/app_demo.gif" alt="App Demo" width="80%">
+  <img src="./streamlit/App_demo.gif" alt="App Demo" width="80%">
 </p>
 
 ## Technical Highlights
