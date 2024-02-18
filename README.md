@@ -2,21 +2,27 @@
 
 ## Overview
 
-This Polyp Segmentation Tool is designed to assist healthcare professionals by providing an automated way to segment polyps from colonoscopy images. Utilizing a deep learning model based on the U-Net architecture, this tool aims to enhance the preliminary diagnosis process and aid in treatment planning by offering visual segmentation masks of detected polyps.
+Colorectal cancer ranks as the second most common cancer type among women and the third most common among men, with polyps being precursors to this disease. The detection and assessment of polyps through colonoscopy are crucial for early disease detection, which significantly impacts survival rates. However, studies have shown that polyps are often overlooked during colonoscopies, with miss rates of 14%-30% depending on the polyp's type and size. Thus, improving polyp detection can play a crucial role in preventing colorectal cancer and enhancing patient outcomes.
+
+By leveraging the [Kvasir-SEG dataset](https://datasets.simula.no/kvasir-seg/), an open-access collection of gastrointestinal polyp images and corresponding segmentation masks, manually annotated and verified by experienced gastroenterologists, this Polyp Segmentation Tool is designed to assist healthcare professionals by providing an automated way to segment polyps from colonoscopy images. Utilizing a deep learning model based on the U-Net architecture, this tool aims to enhance the preliminary diagnosis process and aid in treatment planning by offering visual segmentation masks of detected polyps.
 
 <p align="center">
   <img src="https://production-media.paperswithcode.com/datasets/Screenshot_from_2021-05-05_23-44-10.png" alt="Intro image" width="80%"/>
 </p>
 
-## Usage
+## Streamlit App Usage
 
 1. **Access the Tool**: Navigate to the Streamlit app URL. 
 
    [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://polyp-segmentation-tool.streamlit.app)
 
-2. **Upload Images**: Use the file uploader to select colonoscopy images (JPG/JPEG) for segmentation.
-3. **Process Images**: Click 'Process Images' to start the segmentation process.
-4. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
+2. **Download Sample Images**: Download sample images provided within the app. Look for the [link](https://github.com/TimKong21/Polyp-Segmentation/tree/main/new_data/test/images/test) to download sample images on the app's homepage.
+
+3. **Upload Images**: Use the file uploader to select colonoscopy images (JPG/JPEG) for segmentation.
+
+4. **Process Images**: Click 'Process Images' to start the segmentation process.
+
+5. **View and Download Results**: Segmentation masks are displayed alongside the original images. A ZIP file containing all masks can be downloaded.
 
 <p align="center">
   <img src="./streamlit/app_demo.gif" alt="App Demo" width="80%">
@@ -39,6 +45,7 @@ This Polyp Segmentation Tool is designed to assist healthcare professionals by p
 
    ```bash
    git clone https://github.com/TimKong21/Polyp-Segmentation.git
+   cd .\Polyp-Segmentation\
    ```
 
 2. **Set Up a Virtual Environment**
